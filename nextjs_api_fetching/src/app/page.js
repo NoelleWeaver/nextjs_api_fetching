@@ -28,16 +28,16 @@ export default async function Home() {
   }
 
   return (
-    <div className="">
+    <div className='bg-[#fbfbfb]'>
       <h1 className="text-center text-[2rem] font-bold mt-[1rem]">Pokemon List</h1>
       <div className="grid grid-cols-3 gap-[2rem] place-items-center mt-[5rem] mb-[5rem]">
         {pokemon.map((poke) => (
-          <div key={poke.id} className="bg-[#ECECEC] w-[25vw] h-[67vh] place-items-center rounded-[20px] border-[6px] border-[#353C69]">
-            <Image src={poke.sprites.front_default} width={500} height={500} alt={poke.name} />
-            <h2 className="capitalize text-[1.5rem] font-semibold">{poke.name}</h2>
-            <div className="bg-white w-[23vw] h-[14vh] p-[1rem] rounded-[20px]">
-              <p className="border-b-2 border-[#333] w-[21vw] h-[5vh]">Height: {poke.height}</p>
-              <p className="w-[22vw] mt-[1rem]">Weight: {poke.weight}</p>
+          <div key={poke.id} className="bg-[#A4ADE7] w-[25vw] h-[67vh] place-items-center rounded-[20px] border-[6px] border-[#7480CE]">
+            <Image src={poke.sprites.front_default} width={500} height={500} alt={poke.name} className="bg-white rounded-[20px] w-[22vw] mt-[1rem] mb-[0.5rem]" />
+            <h2 className="capitalize text-[1.5rem] font-semibold mb-[1rem]">{poke.name}</h2>
+            <div className="bg-[#D5D2E6] w-[23vw] h-[14vh] p-[1rem] rounded-[20px] border-[6px] border-[#F5F5F5]">
+              <p className="border-b-2 border-[#333] w-[20vw] h-[5vh]">Height: {poke.height}</p>
+              <p className="w-[20vw] mt-[1rem]">Weight: {poke.weight}</p>
             </div>
           </div>
         ))}
